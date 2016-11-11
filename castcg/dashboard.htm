@@ -1,0 +1,52 @@
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+
+
+
+<script type="text/javascript">
+
+var actionhtm;
+
+$(document).ready(function(){
+
+  $('#frm').submit(function(){
+      actionhtm = $( "#selfrm option:selected" ).val();
+      $('#frm').attr("action", actionhtm+".php");
+
+  });
+
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+
+
+<form id="frm" method="get" action="#" target="_blank">
+  <select class="forms" id="selfrm">
+      <option id="col1" value="bfloading">배틀필드로딩(2)</option>
+      <option id="ff7" value="ff7">파이널판타지(1)</option>
+      <option id="xbox" value="xbox">Xbox도전과제(2)</option>
+      <option id="neon" value="neon">네온(2)</option>
+  </select>
+
+  <input type="text" class="forms" name="input1">
+  <label for="value1"><span>What's your name?</span></label>
+
+
+  <input type="text" class="forms" name="input2">
+  <label for="value2"><span>What's your message?</span></label>
+
+
+  <input type="submit" id="button" class="forms" value="Submit">
+
+
+</form>
+
+</body>
